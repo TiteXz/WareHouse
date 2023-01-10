@@ -56,7 +56,11 @@ public class Cerveza extends Articulo implements Alcohol {
 
 	@Override
 	public boolean saludable() {
-		return false;
+		boolean saludable = true;
+		if (cereales.equals("lupulo")) {
+			saludable = false;
+		}
+		return saludable;
 	}
 
 	@Override
