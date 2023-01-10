@@ -145,23 +145,5 @@ public class Almacen {
 		return articuloList;	
 	}
 
-	public void ordenarPorStock(String orden) {
-		ArrayList<Articulo> articulosOrdenados = articuloList;
-		
-		if (orden.equals("descendente")) {
-			articulosOrdenados.sort((arg0, arg1) -> arg1.getStock() - arg0.getStock());
-		}else {
-			articulosOrdenados.sort((arg0, arg1) -> arg0.getStock() - arg1.getStock());
-		}
-		
-		for (Articulo articulo : articulosOrdenados) {
-			if (articulo instanceof Refresco) {
-				((Refresco) articulo).visualizarArticulo();
-			}else if (articulo instanceof Cerveza) {
-				((Cerveza) articulo).visualizarArticulo();
-			}else if (articulo instanceof Vino) {
-				((Vino) articulo).visualizarArticulo();
-			}
-		}
-	}
+	
 }
