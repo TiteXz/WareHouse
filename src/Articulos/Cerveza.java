@@ -86,4 +86,17 @@ public class Cerveza extends Articulo implements Alcohol {
 		return tasa;
 	}
 
+	@Override
+	public int compareTo(Articulo o) {
+		if (this.getPrecio() < o.getPrecio()) {
+			return -1;
+		} else {
+			if (this.getPrecio() > o.getPrecio()) {
+				return 1;
+			} else {
+				return 0;
+			}
+		}
+	}
+
 }
